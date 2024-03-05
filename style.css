@@ -1,0 +1,102 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins',sans-serif;
+
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height:100vh;
+    background-color: aqua;
+    flex-direction:column ;
+}
+
+section{
+    background-color: #fff;
+    padding:20px;
+    border-radius:6px;
+    box-shadow:0 0 50px rgba(0, 0, 0, 0.1);
+
+}
+
+.jeu{
+    width:500px;
+    height: 200px;
+    border:1px solid #000;
+    overflow: hidden;
+    border:0;
+    border-bottom :1px solid #181818
+}
+.personne {
+    width:20px;
+    height: 50px;
+    position: relative;
+    top:150px;
+
+}
+
+.animation{
+    animation: personne-saut 500ms infinite;
+}
+
+/*
+animation des objets
+*/
+@keyframes personne-saut {
+    0%{
+        top:130px;
+    }250%{
+        top:80px;
+    }50%{
+        top:80px;
+    }
+}
+
+.personne img{
+    width:100%;
+    height:100%;
+    object-fit: cover;
+}
+.obstacle{
+    width:20px;
+    height:20px;
+    background-color:#333;
+    position:relative;
+    top:130px;
+    left:480px;
+    border-radius:50%;/*  on met l'objet completement rond par un 50%*/
+    animation:anime-obstacle 2.5s infinite; /* 2.5 pour extimer la vitesse à laquelle la balle aura*/
+
+}
+/* animation de l'obstacle */
+@keyframes anime-obstacle {
+    0%{
+        left:480px;
+    }100%{
+        left:-40px;
+    }
+}
+
+.control{
+    margin-top:20px;
+    text-align:center;
+
+}
+a,button{
+    padding:10px 50px;
+    border-radius:4px;
+    border:0px;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.1);
+    font-weight: bold;
+    cursor:pointer;
+    background-color: #14c279;
+    font-size: 15px;
+    text-decoration: 0;
+    color: #000;
+
+}
+#btn{
+    color: #f8f3f7;
+}
